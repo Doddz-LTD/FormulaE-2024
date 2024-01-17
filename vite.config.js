@@ -10,7 +10,7 @@ import { resolve, dirname } from 'node:path'
 export default ({ mode }) => {
   process.env = {...process.env, ...loadEnv(mode, process.cwd())};
   return defineConfig({
-    base: "/FormulaE/",
+    base: "/FormulaE-2024/",
     plugins: [
       vue(),
       VueI18nPlugin({
