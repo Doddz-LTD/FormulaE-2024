@@ -73,7 +73,7 @@ watch(scoreFixed, () => {
 onMounted(() => {
   timedScore.value = scoreFixed.value;
 });
-  
+
 const expandCard = () => {
   quizStore.newQuestion(genType.value);
   quizStore.incrementRound();
@@ -271,7 +271,9 @@ const normalizeToRange = (value, oldMin, oldMax, newMin, newMax) => (((value - o
     <v-sheet v-if="show" class="g-hud" :class="{ 'g-hud-l-def': !isRtl, 'g-hud-l-rtl': isRtl }">
       <v-slide-y-reverse-transition group>
         <v-sheet v-if="expandHud" class="g-hud-w">
-          <div :class="{ 'g-show-points': showPoints, 'g-correct-points': correctPoints, 'g-wrong-points': wrongPoints, 'g-hud-total-def': !isRtl, 'g-hud-total-rtl': isRtl }" class="g-hud-total py-1">
+          <div
+            :class="{ 'g-show-points': showPoints, 'g-correct-points': correctPoints, 'g-wrong-points': wrongPoints, 'g-hud-total-def': !isRtl, 'g-hud-total-rtl': isRtl }"
+            class="g-hud-total py-1">
             +{{ timeLeftFixed }} {{ $t("global.pts") }}
           </div>
           <div class="g-hud-round px-4 py-1">{{ $t("global.round") }}
@@ -404,7 +406,7 @@ const normalizeToRange = (value, oldMin, oldMax, newMin, newMax) => (((value - o
   transition: opacity 0.25s ease 0s;
   background-color: #28673C00;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 21px;
   color: #F0F0F0;
   text-align: right;
   vertical-align: bottom;
@@ -414,8 +416,8 @@ const normalizeToRange = (value, oldMin, oldMax, newMin, newMax) => (((value - o
     -1px 1px 0 #28673C,
     -1px -1px 0 #28673C,
     1px -1px 0 #28673C;
-    padding-right: 5px;
-    padding-left: 5px;    
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .g-hud-total-def {
@@ -519,7 +521,7 @@ const normalizeToRange = (value, oldMin, oldMax, newMin, newMax) => (((value - o
   .g-hud-total {
     font-size: 20px;
     padding-right: 15px;
-    padding-left: 15px;      
+    padding-left: 15px;
   }
 }
 
